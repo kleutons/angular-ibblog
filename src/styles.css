@@ -18,7 +18,7 @@
     --cl-text-primary:#0f172a;
     --cl-text-secondary:#475569;
 
-    --shadow: 0 1px 2px #0f172a0d;
+    --shadow: 0 2px 3px #0f172a0d;
     --deg: 45deg;
     --gradient: linear-gradient(var(--deg),#3b82f6,#d946ef);
     --border-top-bg: var(--gradient);
@@ -31,6 +31,7 @@
     --bg-primary: #1e293b;
     --cl-text-primary:#fff;
     --cl-text-secondary:#94a3b8;
+    --shadow: 0 2px 3px #b2c9ff0d;
 }
 
 

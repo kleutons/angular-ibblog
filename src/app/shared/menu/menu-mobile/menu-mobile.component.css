@@ -24,21 +24,25 @@ button.menu_mobile{
  z-index: 90;
 }
 
+.menu-continer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+    padding: 0 15px;
+}
 .menu-content{
     position:absolute;
     top: 0;
     left: -100%;
     width: 300px;
     height: 100vh;
-    background: white;
+    background: var(--bg-primary);
     opacity: 1;
     transition: opcity .3s, left .3s ;
     z-index: 999;
 }
 
-.menu-continer{
-    padding: 0 15px;
-}
 .menu-header{
     display: flex;
     align-items: center;
@@ -46,6 +50,20 @@ button.menu_mobile{
     padding: 15px 0;
     margin-bottom: 20px;
     box-shadow: var(--shadow);
+}
+.menu-body{
+    flex: auto;
+}
+.menu-footer{
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.menu-footer a{
+    font-weight: 400;
+    text-decoration: underline;
 }
 div.mobile-menu.show{
     .menu-content{        
