@@ -1,0 +1,23 @@
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    cursor: pointer;
+
+    >li{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    >li:hover{
+        color: var(--hover-color);
+    }
+}
+ul.mobile{
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+    >li{
+        width: 100%;
+    }
+}

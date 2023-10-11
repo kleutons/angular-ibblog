@@ -1,1 +1,12 @@
-<p>header works!</p>
+
+<header>
+    <div class="border-top"></div>
+    <div class="container">
+        <nav>
+            <app-menu-mobile *ngIf="isMobile"></app-menu-mobile>
+            <app-logo></app-logo>
+            <app-menu-txt *ngIf="!isMobile"></app-menu-txt>
+        </nav>
+        <app-menu-icons></app-menu-icons>
+    </div>
+</header>

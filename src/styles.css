@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color .2s;       
+    list-style: none;
+    outline: 0;
+    > button {
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+}
+:root{
+    --bg-body: #f8fafc;
+    --bg-primary: #fff;
+    --cl-text-primary:#0f172a;
+    --cl-text-secondary:#475569;
+
+    --shadow: 0 1px 2px #0f172a0d;
+    --deg: 45deg;
+    --gradient: linear-gradient(var(--deg),#3b82f6,#d946ef);
+    --border-top-bg: var(--gradient);
+    --hover-color: #3b82f6;
+}
+
+:root .dark-theme{
+    --bg-body: #0f172a;
+    --bg-primary: #1e293b;
+    --cl-text-primary:#fff;
+    --cl-text-secondary:#94a3b8;
+}
+
+
+
+body{
+    background-color: var(--bg-body);
+    color: var(--cl-text-primary);
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+.container{width:100%; margin: 0 auto}
+@media (min-width:1080px){
+    .container{max-width:1110px; padding: 0 40px;}
+}

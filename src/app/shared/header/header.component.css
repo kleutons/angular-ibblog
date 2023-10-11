@@ -1,0 +1,38 @@
+header{
+    background-color: var(--bg-primary);
+    width: 100%;
+    box-shadow: var(--shadow); 
+    color: var(--cl-primary);
+}
+
+.border-top{
+    width: 100%;
+    height: 5px;
+    background: var(--border-top-bg);
+}
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    height: 100%;
+}
+a.logo{
+    height: 100%;
+    padding: 10px 0;
+}
+a.logo img{
+    height: 100%;
+}
+
+li{
+    cursor: pointer;
+}
