@@ -1,0 +1,11 @@
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width:790px){
+    section{
+        flex-direction: row;
+    }
+}

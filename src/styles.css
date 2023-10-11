@@ -6,12 +6,17 @@
     transition: background-color .2s;       
     list-style: none;
     outline: 0;
+    font-weight: 300;
     > button {
         background: none;
         border: 0;
         cursor: pointer;
     }
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
 :root{
     --bg-body: #f8fafc;
     --bg-primary: #fff;
@@ -23,6 +28,7 @@
     --gradient: linear-gradient(var(--deg),#3b82f6,#d946ef);
     --border-top-bg: var(--gradient);
     --hover-color: #3b82f6;
+    --radius: 10px;
 
 }
 

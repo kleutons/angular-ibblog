@@ -3,6 +3,7 @@ header{
     width: 100%;
     box-shadow: var(--shadow); 
     color: var(--cl-primary);
+    margin-bottom: 25px;
 }
 
 .border-top{
