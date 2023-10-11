@@ -23,6 +23,7 @@
     --gradient: linear-gradient(var(--deg),#3b82f6,#d946ef);
     --border-top-bg: var(--gradient);
     --hover-color: #3b82f6;
+
 }
 
 :root .dark-theme{
@@ -43,7 +44,13 @@ a{
     text-decoration: none;
     color: currentColor;
 }
-.container{width:100%; margin: 0 auto}
+.container{
+    width:100%; 
+    margin: 0 auto;
+    padding: 0 10px;
+}
 @media (min-width:1080px){
-    .container{max-width:1110px; padding: 0 40px;}
+    .container{
+        max-width:1110px;
+    }
 }

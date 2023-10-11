@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -7,18 +7,25 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./logo.component.css']
 })
 export class LogoComponent {
+  
   public urlLogo:string = 'iblog-logo.png';
+  @Input()
+  isDark:boolean = false;
 
   constructor(private serviceTheme: ThemeService){
   }
   
   ngOnInit():void{
-    this.serviceTheme.getIsDark().subscribe((theme) => {
-      if(theme){
-        this.urlLogo = 'iblog-logo-dark.png';
-      }else{
-        this.urlLogo = 'iblog-logo.png';
-      }
-    });
+    if(this.isDark){
+      this.urlLogo = 'iblog-logo-dark.png';
+    }else{
+      this.serviceTheme.getIsDark().subscribe((theme) => {
+        if(theme){
+          this.urlLogo = 'iblog-logo-dark.png';
+        }else{
+          this.urlLogo = 'iblog-logo.png';
+        }
+      });
+    }
   }
 }

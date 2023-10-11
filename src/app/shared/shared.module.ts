@@ -8,6 +8,7 @@ import { MenuIconsComponent } from './menu/menu-icons/menu-icons.component';
 import { MenuTxtComponent } from './menu/menu-txt/menu-txt.component';
 import { MenuMobileComponent } from './menu/menu-mobile/menu-mobile.component';
 import { LogoComponent } from './menu/logo/logo.component';
+import { MenuSocialComponent } from './menu/menu-social/menu-social.component';
 
 
 @NgModule({
@@ -17,10 +18,12 @@ import { LogoComponent } from './menu/logo/logo.component';
     MenuIconsComponent,
     MenuTxtComponent,
     MenuMobileComponent,
-    LogoComponent
+    LogoComponent,
+    MenuSocialComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

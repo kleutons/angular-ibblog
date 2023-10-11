@@ -1,0 +1,27 @@
+footer{
+    box-shadow: var(--shadow);
+    background: #1e293b;;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 45px;
+}
+.footer-site {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 35px 0;
+}
+.footer-by{
+    background: #0f172a;
+    padding: 30px 0;
+    text-align: center;
+}
+.footer-by a{
+    color: aqua;
+    text-decoration:underline;
+}
+.footer-by a:hover{
+    color: #fff;
+}
