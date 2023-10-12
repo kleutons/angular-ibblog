@@ -1,0 +1,20 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    gap:7px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+li{
+    padding: 4px 11px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    transition: all .3s;
+}
+li:hover{
+  background: var(--gradient);
+  color: #fff;
+}
