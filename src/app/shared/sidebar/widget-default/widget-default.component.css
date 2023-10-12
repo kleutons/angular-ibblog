@@ -1,0 +1,14 @@
+.widget{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    background: var(--bg-primary);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.widget__title{
+    font-size: 1.2rem;
+    font-weight: 700;
+}

@@ -14,4 +14,7 @@ export class BigCardComponent {
   categoryCard:string = '';
   @Input()
   dateCard:string = '';
+
+  @Input()
+  isSidebar:boolean = false;
 }

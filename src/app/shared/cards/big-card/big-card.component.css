@@ -3,9 +3,17 @@
     height: 300px;
     border-radius: 8px;
 }
+.big-card.sidebar{
+    height: 200px;
+}
+
 h2{
     font-size: 1.7rem;
 }
+.big-card.sidebar h2{
+    font-size: 1.2rem;
+}
+
 a{
     position: relative;
     border-radius: var(--radius);
@@ -34,7 +42,7 @@ a{
     object-fit: cover;
     border-radius: var(--radius);
 }
-.date{
+time{
     font-size: .8rem;
 }
 .header{

@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-latest-card',
-  templateUrl: './latest-card.component.html',
-  styleUrls: ['./latest-card.component.css']
+  selector: 'app-article-card',
+  templateUrl: './article-card.component.html',
+  styleUrls: ['./article-card.component.css']
 })
-export class LatestCardComponent {
+export class ArticleCardComponent {
   @Input()
   thumbnailCard: string = '';
   @Input()

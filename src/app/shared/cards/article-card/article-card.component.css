@@ -1,16 +1,16 @@
-.latest-card{
+.article-card{
     display: flex;
     flex-direction:column;
     align-items: center;
     gap: 20px;
 }
 
-.latest-card__thumbnail{
+.article-card__thumbnail{
     height: 200px;
     width: 100%;
     position: relative;
 }
-.latest-card__thumbnail img{
+.article-card__thumbnail img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -18,7 +18,7 @@
     border-radius: var(--radius);
 }
 
-.latest-card__thumbnail span{
+.article-card__thumbnail span{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -29,19 +29,20 @@
     color: #fff;
 }
 
-.latest-card__content{
+.article-card__content{
     display: flex;
     flex-direction:column;
     gap: 7px;
 }
-.latest-card__content .date{
+.article-card__content time{
     font-size: .8rem;
+    color: #94a3b8;
 }
 @media (min-width:690px){
-    .latest-card{
+    .article-card{
         flex-direction: row;
     }
-    .latest-card__content{
+    .article-card__content{
         width: 100%;
     }
 }

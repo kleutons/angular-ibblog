@@ -1,11 +1,11 @@
-<div class="big-card">
+<div class="big-card" [ngClass]="{'sidebar': isSidebar}">
     <a href="" >
         <div class="thubnail">
             <img src="{{ thumbnailCard }}">
             <div class="header">
                 <span>{{ categoryCard }}</span>
                 <h2>{{ titleCard }}</h2>
-                <div class="date">{{ dateCard }}</div>
+                <time>{{ dateCard }}</time>
             </div>
         </div>
     </a>

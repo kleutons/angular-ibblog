@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { BigCardComponent } from './cards/big-card/big-card.component';
+import { FeaturedCardComponent } from './cards/featured-card/featured-card.component';
+import { ArticleCardComponent } from './cards/article-card/article-card.component'
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,10 +17,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FeaturedArticlesComponent } from './sidebar/featured-articles/featured-articles.component';
 import { TagsComponent } from './sidebar/tags/tags.component';
 import { SubscribeComponent } from './sidebar/subscribe/subscribe.component';
+import { WidgetDefaultComponent } from './sidebar/widget-default/widget-default.component';
+import { DefaultCardComponent } from './cards/default-card/default-card.component';
 
 
 @NgModule({
   declarations: [
+    BigCardComponent,
+    FeaturedCardComponent,
+    ArticleCardComponent,
     HeaderComponent,
     FooterComponent,
     MenuIconsComponent,
@@ -29,12 +37,17 @@ import { SubscribeComponent } from './sidebar/subscribe/subscribe.component';
     SidebarComponent,
     FeaturedArticlesComponent,
     TagsComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    WidgetDefaultComponent,
+    DefaultCardComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    BigCardComponent,
+    FeaturedCardComponent,
+    ArticleCardComponent
   ],
   imports: [
     CommonModule,
