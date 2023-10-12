@@ -9,6 +9,10 @@ import { MenuTxtComponent } from './menu/menu-txt/menu-txt.component';
 import { MenuMobileComponent } from './menu/menu-mobile/menu-mobile.component';
 import { LogoComponent } from './menu/logo/logo.component';
 import { MenuSocialComponent } from './menu/menu-social/menu-social.component';
+import { SocialComponent } from './sidebar/social/social.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FeaturedArticlesComponent } from './sidebar/featured-articles/featured-articles.component';
+import { TagsComponent } from './sidebar/tags/tags.component';
 
 
 @NgModule({
@@ -19,11 +23,16 @@ import { MenuSocialComponent } from './menu/menu-social/menu-social.component';
     MenuTxtComponent,
     MenuMobileComponent,
     LogoComponent,
-    MenuSocialComponent
+    MenuSocialComponent,
+    SocialComponent,
+    SidebarComponent,
+    FeaturedArticlesComponent,
+    TagsComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

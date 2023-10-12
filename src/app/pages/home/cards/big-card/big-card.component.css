@@ -35,6 +35,9 @@ a{
     object-fit: cover;
     border-radius: var(--radius);
 }
+.date{
+    font-size: .8rem;
+}
 .header{
     position: absolute;
     left: 0;;

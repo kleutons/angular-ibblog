@@ -5,11 +5,11 @@ ul {
     gap: 15px;
     cursor: pointer;
 
-    >li{
+    > li a{
         font-weight: 500;
         font-size: 15px;
     }
-    >li:hover{
+    > li:hover{
         color: var(--hover-color);
     }
 }

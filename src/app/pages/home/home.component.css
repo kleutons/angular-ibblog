@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.sidebar{
+    width: 100%;
+}
+
+@media (min-width:870px){
+    .content{
+        flex-direction: row;
+    }
+    .sidebar{
+        max-width: 25%;
+    }
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-featured-card',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./featured-card.component.css']
 })
 export class FeaturedCardComponent {
+  @Input()
+  thumbnailCard: string = '';
+  @Input()
+  titleCard: string = '';
+  @Input()
+  dateCard:string = '';
 
 }

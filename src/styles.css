@@ -20,6 +20,7 @@ h1,h2,h3,h4,h5,h6{
 :root{
     --bg-body: #f8fafc;
     --bg-primary: #fff;
+    --bg-button: var(--gradient);
     --cl-text-primary:#0f172a;
     --cl-text-secondary:#475569;
 
@@ -29,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
     --border-top-bg: var(--gradient);
     --hover-color: #3b82f6;
     --radius: 10px;
+    
 
 }
 
@@ -59,5 +61,6 @@ a{
 @media (min-width:1080px){
     .container{
         max-width:1110px;
+        padding: 0 20px;
     }
 }
