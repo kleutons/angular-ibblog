@@ -7,11 +7,12 @@
     list-style: none;
     outline: 0;
     font-weight: 300;
-    > button {
-        background: none;
-        border: 0;
-        cursor: pointer;
-    }
+    
+}
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: 700;

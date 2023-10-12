@@ -2,7 +2,6 @@
 .big-card{
     height: 300px;
     border-radius: 8px;
-    
 }
 h2{
     font-size: 1.7rem;
@@ -11,6 +10,7 @@ a{
     position: relative;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    width: 100%;
 }
 .thubnail{
      width: 100%;
@@ -23,7 +23,6 @@ a{
     bottom: 0;
     left: 0;
     right: 0;
-    backface-visibility: hidden;
     background: linear-gradient(var(--deg),#3b82f6 0%,#d946ef66 100%);
     opacity: 1;
     border-radius: var(--radius);
@@ -40,10 +39,9 @@ a{
 }
 .header{
     position: absolute;
-    left: 0;;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    overflow: hidden;
     text-shadow: 2px 1px 6px #000000ab;
     padding: 20px;
     color: #fff;

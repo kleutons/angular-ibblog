@@ -67,14 +67,17 @@ button svg:hover{
   padding: 0 10px;
   opacity: .65;
 }
- .search-display.show{
-  .overlay-bg{
-      visibility: visible;
-      opacity: 1;
-  }
-  .search-form{
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(-50%,0,0);
-  }
+
+.search-form button svg{
+  color: #0f172a;
+}
+.search-display.show .overlay-bg{
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-display.show .search-form{
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%,0,0);
 }

@@ -1,9 +1,8 @@
 button.menu_mobile{
     color: var(--cl-primary);
-
-    &:hover{
-        color: var(--hover-color);
-    }
+}
+button.menu_mobile:hover{
+    color: var(--hover-color);
 }
 .border-top{
     width: 100%;
@@ -66,15 +65,13 @@ button.menu_mobile{
     font-weight: 400;
     text-decoration: underline;
 }
-div.mobile-menu.show{
-    .menu-content{        
+div.mobile-menu.show .menu-content{        
         left: 0;
         opacity: 1;
         visibility: visible;
-    }
-    .overlay-bg{
-        visibility: visible;
-        opacity: 1;
-    }
 }
 
+div.mobile-menu.show .overlay-bg{
+        visibility: visible;
+        opacity: 1;
+}

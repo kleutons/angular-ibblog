@@ -4,20 +4,22 @@ ul {
     justify-content: space-between;
     gap: 15px;
     cursor: pointer;
-
-    > li a{
-        font-weight: 500;
-        font-size: 15px;
-    }
-    > li:hover{
-        color: var(--hover-color);
-    }
 }
+
+ul li a{
+    font-weight: 500;
+    font-size: 15px;
+}
+ul li:hover{
+    color: var(--hover-color);
+}
+
 ul.mobile{
     flex-direction: column;
     width: 100%;
     gap: 18px;
-    >li{
-        width: 100%;
-    }
+}
+
+ul.mobile li{
+    width: 100%;
 }

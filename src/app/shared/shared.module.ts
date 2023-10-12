@@ -13,6 +13,7 @@ import { SocialComponent } from './sidebar/social/social.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FeaturedArticlesComponent } from './sidebar/featured-articles/featured-articles.component';
 import { TagsComponent } from './sidebar/tags/tags.component';
+import { SubscribeComponent } from './sidebar/subscribe/subscribe.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TagsComponent } from './sidebar/tags/tags.component';
     SocialComponent,
     SidebarComponent,
     FeaturedArticlesComponent,
-    TagsComponent
+    TagsComponent,
+    SubscribeComponent
   ],
   exports: [
     HeaderComponent,
