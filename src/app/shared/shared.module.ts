@@ -19,6 +19,7 @@ import { TagsComponent } from './sidebar/tags/tags.component';
 import { SubscribeComponent } from './sidebar/subscribe/subscribe.component';
 import { WidgetDefaultComponent } from './sidebar/widget-default/widget-default.component';
 import { DefaultCardComponent } from './cards/default-card/default-card.component';
+import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { DefaultCardComponent } from './cards/default-card/default-card.componen
     TagsComponent,
     SubscribeComponent,
     WidgetDefaultComponent,
-    DefaultCardComponent
+    DefaultCardComponent,
+    ButtonPrimaryComponent    
   ],
   exports: [
     HeaderComponent,

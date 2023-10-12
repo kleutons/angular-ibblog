@@ -30,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
     --border-top-bg: var(--gradient);
     --hover-color: #3b82f6;
     --radius: 10px;
+    --border-color: #0f172a0d;
     
 
 }
@@ -41,6 +42,7 @@ h1,h2,h3,h4,h5,h6{
     --cl-text-secondary:#94a3b8;
     --shadow: 0 2px 3px #b2c9ff0d;
     --hover-color: aqua;
+    --border-color: #ffffff08;
 }
 
 body{
