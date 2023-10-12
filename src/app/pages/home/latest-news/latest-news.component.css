@@ -15,7 +15,6 @@ section{
 }
 
 .latest-new__header button{
-    color: var( --hover-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,9 +27,6 @@ section{
     width: 15px;
 }
 
-.latest-new__header button:hover{
-    text-decoration: underline;
-}
 
 .latest-new__header h3{
     font-size: 1.2rem;

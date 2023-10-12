@@ -24,7 +24,6 @@ h1,h2,h3,h4,h5,h6{
     --bg-button: var(--gradient);
     --cl-text-primary:#0f172a;
     --cl-text-secondary:#475569;
-
     --shadow: 0 2px 3px #0f172a0d;
     --deg: 45deg;
     --gradient: linear-gradient(var(--deg),#3b82f6,#d946ef);
@@ -44,17 +43,27 @@ h1,h2,h3,h4,h5,h6{
     --hover-color: aqua;
 }
 
-
-
 body{
     background-color: var(--bg-body);
     color: var(--cl-text-primary);
 }
-
-a{
-    text-decoration: none;
+a{  
     color: currentColor;
+    text-decoration: none;
 }
+a:hover{
+    text-decoration: underline
+}
+.link{
+    color: #3b82f6;
+}
+body.dark-theme .link{
+    color: aqua;
+}
+body .link:hover{
+    text-decoration: underline;
+}
+
 .container{
     width:100%; 
     margin: 0 auto;

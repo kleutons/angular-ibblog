@@ -1,1 +1,17 @@
-<p>hot-news works!</p>
+<div class="hotnews">
+    <div class="hotnews__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve"><path d="M26.8,11.5l-12,19C14.7,30.8,14.3,31,14,31c-0.1,0-0.2,0-0.3-0.1c-0.4-0.2-0.7-0.6-0.6-1.1L14.8,17H6    c-0.4,0-0.7-0.2-0.9-0.5c-0.2-0.3-0.1-0.7,0.1-1l10-14c0.3-0.4,0.7-0.5,1.1-0.4C16.7,1.2,17,1.6,17,2v8h9c0.4,0,0.7,0.2,0.9,0.5    C27,10.8,27,11.2,26.8,11.5z"/></svg>
+        <span> 
+            News
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+        </span>
+    </div>
+    <div class="hotnews_content">
+        <a *ngFor="let news of hotNews; let i = index" [href]="news.url" class="link" [ngClass]="{'active': i == currentIndex}">
+            <h2>
+                {{ news.title }}
+            </h2>
+        </a>
+    </div>
+    
+</div>
