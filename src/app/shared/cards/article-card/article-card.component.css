@@ -16,6 +16,10 @@
     object-fit: cover;
     object-position: center;
     border-radius: var(--radius);
+    transition: all .5s;
+}
+.article-card:hover img{
+    filter: brightness(1.3);
 }
 
 .article-card__thumbnail span{
@@ -37,6 +41,10 @@
 .article-card__content time{
     font-size: .8rem;
     color: #94a3b8;
+}
+
+.author-date{
+    font-size: .8rem;
 }
 @media (min-width:690px){
     .article-card{

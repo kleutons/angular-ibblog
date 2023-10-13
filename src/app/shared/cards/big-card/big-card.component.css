@@ -34,6 +34,10 @@ a{
     background: linear-gradient(var(--deg),#3b82f6 0%,#d946ef66 100%);
     opacity: 1;
     border-radius: var(--radius);
+    transition: .5s;
+}
+.thubnail:hover::before{
+    filter: brightness(1.4);
 }
 .thubnail img{
     width: 100%;

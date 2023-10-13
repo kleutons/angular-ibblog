@@ -12,7 +12,7 @@
         flex-direction: row;
     }
     main{
-        max-width: 72%;
+        width: 72%;
     }
     .sidebar{
         max-width: 28%;
