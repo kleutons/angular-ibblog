@@ -1,0 +1,15 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+li {
+    color: #3b82f6;
+}

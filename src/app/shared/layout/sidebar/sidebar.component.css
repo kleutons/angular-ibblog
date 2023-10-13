@@ -1,0 +1,20 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar{
+    width: 100%;
+}
+
+@media (min-width:930px){
+    .content{
+        flex-direction: row;
+    }
+    main{
+        max-width: 72%;
+    }
+    .sidebar{
+        max-width: 28%;
+    }
+}

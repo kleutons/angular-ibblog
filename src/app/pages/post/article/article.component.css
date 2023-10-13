@@ -1,0 +1,21 @@
+article{
+    background: var(--bg-primary);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+img{ 
+    max-width: 95%;
+    margin: 12px auto;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+p{
+    padding: 10px 0;
+}

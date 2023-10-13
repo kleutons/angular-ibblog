@@ -65,7 +65,9 @@ body.dark-theme .link{
 body .link:hover{
     text-decoration: underline;
 }
-
+strong{
+    font-weight: bold;
+}
 .container{
     width:100%; 
     margin: 0 auto;

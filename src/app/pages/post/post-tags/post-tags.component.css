@@ -1,0 +1,21 @@
+div{
+    margin-top: 10px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+ul li{
+    padding: 5px 8px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+ul li:not(li.main):hover{
+    background: var(--gradient);
+    color: #fff;
+}
+li.main{
+    background-color: #000;
+    color:#fff;
+}

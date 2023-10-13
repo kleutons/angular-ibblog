@@ -20,7 +20,8 @@ import { SubscribeComponent } from './sidebar/subscribe/subscribe.component';
 import { WidgetDefaultComponent } from './sidebar/widget-default/widget-default.component';
 import { DefaultCardComponent } from './cards/default-card/default-card.component';
 import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.component';
-
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { LayoutSidebarComponent } from './layout/sidebar/sidebar.component'
 
 @NgModule({
   declarations: [
@@ -41,15 +42,19 @@ import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.
     SubscribeComponent,
     WidgetDefaultComponent,
     DefaultCardComponent,
-    ButtonPrimaryComponent    
+    ButtonPrimaryComponent,
+    BreadcrumbComponent,
+    LayoutSidebarComponent    
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent,
+    LayoutSidebarComponent,
     BigCardComponent,
     FeaturedCardComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    BreadcrumbComponent,
+    MenuSocialComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,21 @@
+.about-author{
+    margin-top: 25px;
+    display: flex;
+    background: var(--bg-primary);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 20px;
+    gap: 20px;
+}
+
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: .9rem;
+}

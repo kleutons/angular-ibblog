@@ -1,0 +1,40 @@
+.share{
+    margin-top: 20px;
+}
+svg{
+    height: 1.3rem;
+    width: 1.3rem;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+li{ 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding:10px 11px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+li:hover{
+    filter: brightness(1.2);
+}
+li.share_icon{
+    border: 1px solid var(--border-color);
+}
+li.facebook{
+    background-color: #3b5999;
+    color: #fff;
+}
+li.twitter{
+    background-color: #00acee;
+    color: #fff;
+}
+li.whats{
+    background-color: #3fbb50;
+    color: #fff;
+}

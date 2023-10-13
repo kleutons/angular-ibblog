@@ -1,0 +1,23 @@
+h1{
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+}
+.author-date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: var(--cl-text-secondary);
+    font-size: .95rem;
+    margin: 17px 0;
+}
+.author-date img{
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+}
+
+.author-date strong{
+    font-weight: bold;
+    color: var(--cl-text-primar);
+}
