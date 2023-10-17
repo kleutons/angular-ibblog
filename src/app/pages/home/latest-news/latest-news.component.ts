@@ -24,6 +24,7 @@ export class LatestNewsComponent {
             
             if(i >2 && i <= 6){
               this.valueTotalNews = i;
+              item.editorias = this.apiService.getCategoryName(item.editorias);
               this.latestNews.push(item);
             }
           })
@@ -42,6 +43,7 @@ export class LatestNewsComponent {
             
             if(i > isTotal && i <= (isTotal + this.totalPerClick) && i <= this.totalLimit){
               this.valueTotalNews = i;
+              item.editorias = this.apiService.getCategoryName(item.editorias);
               this.latestNews.push(item);
             }
           })

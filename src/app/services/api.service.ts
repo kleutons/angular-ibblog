@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject} from 'rxjs';
 import { map } from 'rxjs/operators'
-import { newsData } from '../types/newsData';
+import { ECategory, newsData } from '../types/newsData';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 
@@ -46,6 +46,21 @@ export class ApiService {
         return this.cacheNews.getValue().items;
       })
     )
+  }
+  
+  getCategoryName(category: string): string {
+    switch (category) {
+      case 'economicas':
+        return ECategory.economicas;
+      case 'ibge':
+        return ECategory.ibge;
+      case 'sociais':
+        return ECategory.sociais;
+      case 'geociencias':
+        return ECategory.geociencias;
+      default:
+        return category;
+    }
   }
 
   clearCache(){

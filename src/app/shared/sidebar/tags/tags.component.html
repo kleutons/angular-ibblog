@@ -1,33 +1,13 @@
 <app-widget-default widgetTitle="Tags principais">
     <ul>
         <li>
-            <a [routerLink]="['/search/category', 1]" >
+            <a [routerLink]="['/search/category', 'news']" >
                 News
             </a>
         </li>
-        <li>
-            <a [routerLink]="['/search/category', 2]">
-                Tecnologia
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/search/category', 3]">
-                Brasil
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/search/category', 4]">
-                Regional
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/search/category', 5]">
-                Mundo
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/search/category', 6]">
-                Ofertas
+        <li *ngFor="let tag of tagsData ">
+            <a [routerLink]="['/search/category', tag.link]">
+                {{tag.name | titlecase}}
             </a>
         </li>
     </ul>

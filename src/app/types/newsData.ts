@@ -30,6 +30,13 @@ export type imgUrl = {
   image_fulltext: string
 }
 
+export enum ECategory{
+  economicas = 'Estatísticas Econômicas',
+  ibge = 'IBGE',
+  sociais = 'Estatísticas Sociais',
+  geociencias = 'Geociências',
+}
+
 export type typeBreadcrumbs = {
   link: string,
   name: string

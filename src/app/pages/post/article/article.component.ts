@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-import { newsData, typeBreadcrumbs } from 'src/app/types/newsData';
+import { ECategory, newsData, typeBreadcrumbs } from 'src/app/types/newsData';
 
 @Component({
   selector: 'app-post-article',
@@ -12,6 +12,8 @@ export class ArticleComponent {
   getId:string | null = null;
   @Input()
   getArticle!: newsData;
+  @Input()
+  getArticleCategory:string = '';
 
   @Input()
   articleBreadcrumb: typeBreadcrumbs[] = [];
@@ -20,20 +22,23 @@ export class ArticleComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private serviceApi: ApiService
+    private serviceApi: ApiService,
     ){}
-  
+ 
+
   updateArticleData() {
     this.serviceApi.getData().subscribe((res) => {
       this.getArticle = res.filter((item) => item.id == Number(this.getId))[0];
+      const category:string = this.getArticle.editorias;
+      this.getArticleCategory = this.serviceApi.getCategoryName(category);
       this.articleBreadcrumb = [
         {
-          link: '/',
+          link: '/search/category/news',
           name: 'notícias'
         },
         {
-          link: `/search/category/${this.getArticle.editorias}`,
-          name: this.getArticle.editorias
+          link: `/search/category/${category}`,
+          name: this.getArticleCategory
         }
       ]
     });
