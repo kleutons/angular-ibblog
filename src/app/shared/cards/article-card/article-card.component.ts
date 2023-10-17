@@ -6,6 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./article-card.component.css']
 })
 export class ArticleCardComponent {
+  private _resumeCard: string = '';
+
+  @Input()
+  idCard: string = '';
   @Input()
   thumbnailCard: string = '';
   @Input()
@@ -13,8 +17,14 @@ export class ArticleCardComponent {
   @Input()
   titleCard: string = '';
   @Input()
-  resumeCard: string = '';
+  set resumeCard(value: string) {
+    this._resumeCard = value.length <= 15 ? value : value.substring(0, 98) + '...';
+  }
   @Input()
   dateCard:string = '';
+
+  get resumeCard(): string {
+    return this._resumeCard;
+  }
 
 }

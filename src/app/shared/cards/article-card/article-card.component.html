@@ -1,10 +1,10 @@
 <article class="article-card">
-    <a href="" class="article-card__thumbnail">
+    <a [routerLink]="['post', idCard]" class="article-card__thumbnail">
         <img src="{{thumbnailCard}}">
-        <span>category</span>
+        <span>{{ categoryCard }}</span>
     </a>
     <div class="article-card__content">
-        <a href="">
+        <a [routerLink]="['post', idCard]" >
             <h2>
                {{titleCard}}
             </h2>

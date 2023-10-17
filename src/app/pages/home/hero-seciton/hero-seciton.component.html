@@ -1,5 +1,6 @@
 <section class="container">
     <app-big-card
+        idCard="{{ bigNews.id }}"
         thumbnailCard="{{ bigNews.imagensUrl?.image_intro }}"
         categoryCard="{{ bigNews.editorias }}"
         titleCard="{{bigNews.titulo}}"
@@ -8,9 +9,10 @@
     <div class="featured-card">
         <app-featured-card
             *ngFor="let card of featuredNews; let i = index"
+            idCard="{{ card.id }}"
             thumbnailCard="{{ card.imagensUrl?.image_intro }}"
             titleCard="{{ card.titulo }}"
-            dateCard="05 Agosto, 2023"
+            dateCard="{{ card.data_publicacao }}"
         ></app-featured-card>
     </div>
 </section>

@@ -1,9 +1,9 @@
 <div class="default-card">
-    <a href="" class="default-card__thumbnail">
+    <a [routerLink]="['post', idCard]" class="default-card__thumbnail">
         <img src="{{thumbnailCard}}">
     </a>
     <div class="default-card__content">
-        <a href="">
+        <a [routerLink]="['post', idCard]">
             <h2>
                {{titleCard}}
             </h2>

@@ -18,6 +18,26 @@ export class ApiService {
     this.imgBaseUrl = environment.imgBaseUrl;
   }
 
+
+  private formatData(dataString:string):string {
+    const parts = dataString.split(' ')[0].split('/');
+    if (parts.length !== 3) {
+      return dataString;
+    }
+    const day = parts[0];
+    const month = parts[1];
+    const year = parts[2];
+    
+    const monthNames: string[] = [
+      'Janeiro', 'Fevereiro', 'Março', 'Abril',
+      'Maio', 'Junho', 'Julho', 'Agosto',
+      'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ];
+    
+    
+    return `${day}, ${monthNames[parseInt(month) - 1]}, ${year}`;
+  }
+
   getData():Observable<newsData[]>{
 
     if(this.cacheNews.getValue() !== null){      
@@ -28,22 +48,25 @@ export class ApiService {
     return this.http.get(this.baseURL, {
       params: {
         tipo: 'noticia',
-        qtd: '3'
+        qtd: '29'
       }
     }).pipe(
       map( (res) => {
         this.cacheNews.next(res);
 
-          this.cacheNews.getValue().items = this.cacheNews.getValue().items.map((item: newsData) => {
+          this.cacheNews.getValue().items = this.cacheNews.getValue()
+          .items.map((item: newsData) => {
             const imgURL = JSON.parse(item.imagens);
             const imagensUrl = {
               image_fulltext: `${this.imgBaseUrl}${imgURL.image_fulltext}`,
               image_intro: `${this.imgBaseUrl}${imgURL.image_intro}`,
             };
+
+            item.data_publicacao = this.formatData(item.data_publicacao);
           
             return { ...item, imagensUrl };
           });
-          
+          console.log(this.cacheNews.getValue().items);
         return this.cacheNews.getValue().items;
       })
     )

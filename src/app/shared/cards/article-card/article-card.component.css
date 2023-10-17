@@ -38,6 +38,9 @@
     flex-direction:column;
     gap: 7px;
 }
+.article-card__content h2{
+    font-size: 1.3rem;
+}
 .article-card__content time{
     font-size: .8rem;
     color: #94a3b8;

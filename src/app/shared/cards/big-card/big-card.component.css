@@ -9,6 +9,10 @@
 
 h2{
     font-size: 1.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    -webkit-box-orient: vertical; 
 }
 .big-card.sidebar h2{
     font-size: 1.2rem;

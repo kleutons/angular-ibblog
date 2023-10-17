@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class FeaturedCardComponent {
   @Input()
+  idCard: string = '';
+  @Input()
   thumbnailCard: string = '';
   @Input()
   titleCard: string = '';

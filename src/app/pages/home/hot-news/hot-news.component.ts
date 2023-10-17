@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 
 type typeNews = {
@@ -12,31 +13,36 @@ type typeNews = {
 })
 
 export class HotNewsComponent implements OnInit {
-
+  
+  constructor(
+    private serviceApi: ApiService
+   ) { }
+  
   currentIndex = 0;
 
-  hotNews: typeNews[] = [
-    {
-      url: '/post/1',
-      title: '11 dos melhores laptops avaliados com base no orçamento'
-    },
-    {
-      url: '/post/2',
-      title: 'Como sabemos que os desinfetantes devem matar o Covid-19'
-    },
-    {
-      url: '/post/3',
-      title: 'Os melhores jogos cooperativos offline em tela dividida do Xbox 360'
-    },
-    {
-      url: '/post/4',
-      title: 'Apple Watch Series 5 é o melhor já feito pelo consumidor'
-    }
-  ];
+  hotNews: typeNews[] = [];
 
   ngOnInit() {
+
+    this.serviceApi.getData().subscribe(
+      {
+        next: (res) => {
+          res.map( (item, i) => {
+            if( i <= 5 ){
+              this.hotNews.push({ url: `/post/${item.id}`, title: item.titulo})
+            }
+          })
+        
+        }
+      }
+    )
+
+
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.hotNews.length;
     }, 4200);
+
+
+    
   }
 }
