@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 import { CommonModule } from '@angular/common';
 import { PostComponent } from './post.component';
 import { PostShareComponent } from './post-share/post-share.component';
@@ -20,7 +22,8 @@ import { ArticleComponent } from './article/article.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class PostModule { }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { typeBreadcrumbs } from 'src/app/types/newsData';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./breadcrumb.component.css']
 })
 export class BreadcrumbComponent {
-
+ @Input()
+ breadcrumbData: typeBreadcrumbs[] = [];
 }

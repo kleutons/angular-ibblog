@@ -29,3 +29,8 @@ export type imgUrl = {
   image_intro: string,
   image_fulltext: string
 }
+
+export type typeBreadcrumbs = {
+  link: string,
+  name: string
+}

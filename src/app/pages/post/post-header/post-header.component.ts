@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-header',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./post-header.component.css']
 })
 export class PostHeaderComponent {
+ @Input()
+ postHeaderTitle: string = '';
+ @Input()
+ postHeaderDate: string = '';
 
 }

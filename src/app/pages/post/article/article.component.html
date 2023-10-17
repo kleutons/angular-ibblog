@@ -1,13 +1,26 @@
 <article>
-    <app-breadcrumb></app-breadcrumb>
+    <app-breadcrumb
+        [breadcrumbData] = articleBreadcrumb
+    ></app-breadcrumb>
     <app-post-header
-        postHeaderTitle="{{articleTitle}}"
-        postHeaderDate="{{articleDate}}"
+        postHeaderTitle="{{getArticle.titulo}}"
+        postHeaderDate="{{getArticle.data_publicacao | formatDatePipe }}"
     ></app-post-header>
-    <img src="{{articleThumbnail}}">
+    <img src="{{getArticle.imagensUrl?.image_fulltext}}">
     <div class="content">
-        {{articleContent}}
+        <p><strong>Resumo da Notícia:</strong></p>
+        <p>{{getArticle.introducao}}</p>
+        <p></p>
+        <p>Este blog utiliza uma API externa do IBGE e, portanto, os dados desta notícia são limitados.</p>
+        <p>Para ler a notícia completa, acesse: <br>
+            <a href={{getArticle.link}} target="_blank">
+                {{getArticle.link}}
+            </a> 
+        </p>
     </div>
-    <app-post-tags></app-post-tags>
+    <app-post-tags
+        tagCategory="{{getArticle.editorias}}"
+        tagLink="{{getArticle.editorias}}"
+    ></app-post-tags>
     <app-post-share></app-post-share>
 </article>
