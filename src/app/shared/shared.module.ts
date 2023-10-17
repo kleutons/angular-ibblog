@@ -22,6 +22,7 @@ import { DefaultCardComponent } from './cards/default-card/default-card.componen
 import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { LayoutSidebarComponent } from './layout/sidebar/sidebar.component'
+import { FormatDatePipe } from './pipes/format-date.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LayoutSidebarComponent } from './layout/sidebar/sidebar.component'
     DefaultCardComponent,
     ButtonPrimaryComponent,
     BreadcrumbComponent,
-    LayoutSidebarComponent    
+    LayoutSidebarComponent,
+    FormatDatePipe    
   ],
   exports: [
     HeaderComponent,
@@ -54,7 +56,8 @@ import { LayoutSidebarComponent } from './layout/sidebar/sidebar.component'
     FeaturedCardComponent,
     ArticleCardComponent,
     BreadcrumbComponent,
-    MenuSocialComponent
+    MenuSocialComponent,
+    FormatDatePipe
   ],
   imports: [
     CommonModule,
