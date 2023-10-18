@@ -1,5 +1,6 @@
 <section class="container">
     <app-big-card
+        *ngIf="bigNews"
         idCard="{{ bigNews.id }}"
         thumbnailCard="{{ bigNews.imagensUrl?.image_intro }}"
         categoryCard="{{ bigNews.editorias | categoryName }}"

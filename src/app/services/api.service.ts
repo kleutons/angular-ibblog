@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject} from 'rxjs';
 import { map } from 'rxjs/operators'
-import { ECategory, newsData } from '../types/newsData';
+import { newsData } from '../types/newsData';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 
