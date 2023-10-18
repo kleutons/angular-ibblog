@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from "@angular/forms"
 
 import { BigCardComponent } from './cards/big-card/big-card.component';
 import { FeaturedCardComponent } from './cards/featured-card/featured-card.component';
@@ -64,7 +65,8 @@ import { CategoryNamePipe } from './pipes/category-name.pipe';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

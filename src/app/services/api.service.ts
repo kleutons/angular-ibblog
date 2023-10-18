@@ -29,7 +29,7 @@ export class ApiService {
     return this.http.get(this.baseURL, {
       params: {
         tipo: 'noticia',
-        qtd: '29'
+        qtd: '40'
       }
     }).pipe(
       map( (res) => {
@@ -47,6 +47,22 @@ export class ApiService {
         return this.cacheNews.getValue().items;
       })
     )
+  }
+
+  getSearch(setSearch:string | null):Observable<newsData[]>{
+    const filterNews: BehaviorSubject<any> = new BehaviorSubject(null);
+
+    if(!setSearch){
+      return filterNews;
+    }
+
+      return this.getData().pipe(
+        map( res => {
+          filterNews.next( res.filter((item) => item.titulo.toLowerCase().includes(setSearch.toLowerCase()) || item.introducao.toLowerCase().includes(setSearch.toLowerCase()) ))
+          return filterNews.getValue()
+        })
+
+      )
   }
 
   getSearchFilterCategory(setCategory:string | null):Observable<newsData[]>{
