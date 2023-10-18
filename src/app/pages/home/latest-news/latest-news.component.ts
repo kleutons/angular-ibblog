@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { newsData } from 'src/app/types/newsData';
 
@@ -8,30 +8,14 @@ import { newsData } from 'src/app/types/newsData';
   styleUrls: ['./latest-news.component.css']
 })
 export class LatestNewsComponent {
-  isTotalCurrent: number = 0;
+  isTotalCurrent: number = 6;
   totalPerDisplay: number = 3;
   totalMax: number = 26;  
 
+  @Input()
   latestNews: newsData[] = [];
 
   constructor(private apiService: ApiService ){}
-
-  ngOnInit(){
-    this.apiService.getData().subscribe(
-      {
-        next: (res) => {
-          res.map( (item, i) => {
-            
-            if(i >2 && i <= 6){
-              this.isTotalCurrent = i;
-              this.latestNews.push(item);
-            }
-          })
-        },
-        error: (err) => console.log(err)
-      }
-    )
-  }
 
   moreNews(){
     const isTotal = this.isTotalCurrent;

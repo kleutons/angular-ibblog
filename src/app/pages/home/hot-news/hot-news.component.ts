@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
-
-
-type typeNews = {
-  url: string, title: string
-}
+import { Component, OnInit, Input } from '@angular/core';
+import { typeNews } from 'src/app/types/newsData';
 
 @Component({
   selector: 'app-hot-news',
@@ -12,37 +7,17 @@ type typeNews = {
   styleUrls: ['./hot-news.component.css']
 })
 
-export class HotNewsComponent implements OnInit {
-  
-  constructor(
-    private serviceApi: ApiService
-   ) { }
-  
-  currentIndex = 0;
+export class HotNewsComponent implements OnInit {  
 
+  currentIndex = 0;
+  @Input()
   hotNews: typeNews[] = [];
 
   ngOnInit() {
 
-    this.serviceApi.getData().subscribe(
-      {
-        next: (res) => {
-          res.map( (item, i) => {
-            if( i <= 5 ){
-              this.hotNews.push({ url: `/post/${item.id}`, title: item.titulo})
-            }
-          })
-        
-        }
-      }
-    )
-
-
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.hotNews.length;
-    }, 4200);
-
-
-    
+    }, 3500);
+  
   }
 }

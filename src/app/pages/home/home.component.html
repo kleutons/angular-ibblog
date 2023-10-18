@@ -1,5 +1,11 @@
-<app-hero-seciton></app-hero-seciton>
+<app-hero-seciton
+    [bigNews]="getBigNews"
+    [featuredNews]="getFeaturedNews"
+></app-hero-seciton>
 <app-layout-sidebar>
-    <app-hot-news></app-hot-news>
-    <app-latest-news></app-latest-news>
+    <app-hot-news
+        [hotNews]="getHotNews"
+    ></app-hot-news>
+    <app-latest-news
+    [latestNews]="getLatestNews"></app-latest-news>
 </app-layout-sidebar>

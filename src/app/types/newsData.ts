@@ -41,3 +41,7 @@ export type typeBreadcrumbs = {
   link: string,
   name: string
 }
+
+export type typeNews = {
+  url: string, title: string
+}
