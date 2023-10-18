@@ -13,7 +13,7 @@
                 </button>
             </div>
             <div class="menu-body">
-                <app-menu-txt [isMobile]=true></app-menu-txt>
+                <app-menu-txt [isMobile]=true (click)="toggleMenu()"></app-menu-txt>
             </div>
             <div class="menu-footer">
                 <app-menu-social [isMobile]=true></app-menu-social>
