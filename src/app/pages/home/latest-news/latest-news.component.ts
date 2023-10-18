@@ -8,9 +8,9 @@ import { newsData } from 'src/app/types/newsData';
   styleUrls: ['./latest-news.component.css']
 })
 export class LatestNewsComponent {
-  valueTotalNews: number = 0;
-  private totalPerClick: number = 3;
-  totalLimit: number = 26;
+  isTotalCurrent: number = 0;
+  totalPerDisplay: number = 3;
+  totalMax: number = 26;  
 
   latestNews: newsData[] = [];
 
@@ -23,8 +23,7 @@ export class LatestNewsComponent {
           res.map( (item, i) => {
             
             if(i >2 && i <= 6){
-              this.valueTotalNews = i;
-              item.editorias = this.apiService.getCategoryName(item.editorias);
+              this.isTotalCurrent = i;
               this.latestNews.push(item);
             }
           })
@@ -35,15 +34,14 @@ export class LatestNewsComponent {
   }
 
   moreNews(){
-    const isTotal = this.valueTotalNews;
+    const isTotal = this.isTotalCurrent;
     this.apiService.getData().subscribe(
       {
         next: (res) => {
           res.map( (item, i) => {
             
-            if(i > isTotal && i <= (isTotal + this.totalPerClick) && i <= this.totalLimit){
-              this.valueTotalNews = i;
-              item.editorias = this.apiService.getCategoryName(item.editorias);
+            if(i > isTotal && i <= (isTotal + this.totalPerDisplay) && i <= this.totalMax){
+              this.isTotalCurrent = i;
               this.latestNews.push(item);
             }
           })

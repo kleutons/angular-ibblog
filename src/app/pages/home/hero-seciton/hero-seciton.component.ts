@@ -22,7 +22,6 @@ featuredNews: newsData[] = [];
         res.map( (item, i) => {
           
           if(i == 0){
-            item.editorias = this.serviceApi.getCategoryName(item.editorias);
             this.bigNews = item;
           }else
           if(i > 0 && i <= 2){

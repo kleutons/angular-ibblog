@@ -23,6 +23,7 @@ import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { LayoutSidebarComponent } from './layout/sidebar/sidebar.component'
 import { FormatDatePipe } from './pipes/format-date.pipe';
+import { CategoryNamePipe } from './pipes/category-name.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FormatDatePipe } from './pipes/format-date.pipe';
     ButtonPrimaryComponent,
     BreadcrumbComponent,
     LayoutSidebarComponent,
-    FormatDatePipe    
+    FormatDatePipe,
+    CategoryNamePipe    
   ],
   exports: [
     HeaderComponent,
@@ -57,7 +59,8 @@ import { FormatDatePipe } from './pipes/format-date.pipe';
     ArticleCardComponent,
     BreadcrumbComponent,
     MenuSocialComponent,
-    FormatDatePipe
+    FormatDatePipe,
+    CategoryNamePipe
   ],
   imports: [
     CommonModule,

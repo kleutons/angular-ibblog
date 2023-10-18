@@ -20,7 +20,7 @@
     </div>
     <app-post-tags
         tagLink="{{getArticle.editorias}}"
-        tagCategory="{{getArticleCategory}}"
+        tagCategory="{{getArticle.editorias | categoryName}}"
     ></app-post-tags>
     <app-post-share></app-post-share>
 </article>

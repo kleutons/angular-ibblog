@@ -25,6 +25,7 @@ export class ApiService {
         observ.next(this.cacheNews.getValue().items)
       })
     }    
+
     return this.http.get(this.baseURL, {
       params: {
         tipo: 'noticia',
@@ -47,22 +48,29 @@ export class ApiService {
       })
     )
   }
-  
-  getCategoryName(category: string): string {
-    switch (category) {
-      case 'economicas':
-        return ECategory.economicas;
-      case 'ibge':
-        return ECategory.ibge;
-      case 'sociais':
-        return ECategory.sociais;
-      case 'geociencias':
-        return ECategory.geociencias;
-      default:
-        return category;
-    }
-  }
 
+  getSearchFilterCategory(setCategory:string | null):Observable<newsData[]>{
+    const filterNews: BehaviorSubject<any> = new BehaviorSubject(null);
+
+    if(!setCategory){
+      return filterNews;
+    }
+
+      return this.getData().pipe(
+        map( res => {
+          if(setCategory == 'news'){
+            filterNews.next(res)
+            return filterNews.getValue()
+          }
+
+          filterNews.next( res.filter((item) => item.editorias == setCategory))
+          return filterNews.getValue()
+        })
+
+      )
+    
+  }
+  
   clearCache(){
     this.cacheNews = new BehaviorSubject(null);
   }

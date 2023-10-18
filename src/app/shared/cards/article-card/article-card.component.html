@@ -1,10 +1,10 @@
 <article class="article-card">
-    <a [routerLink]="['post', idCard]" class="article-card__thumbnail">
+    <a [routerLink]="['/post', idCard]" class="article-card__thumbnail">
         <img src="{{thumbnailCard}}">
         <span>{{ categoryCard }}</span>
     </a>
     <div class="article-card__content">
-        <a [routerLink]="['post', idCard]" >
+        <a [routerLink]="['/post', idCard]" >
             <h2>
                {{titleCard}}
             </h2>

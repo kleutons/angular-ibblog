@@ -3,7 +3,7 @@
         *ngIf="bigNews"
         idCard="{{ bigNews.id }}"
         thumbnailCard="{{ bigNews.imagensUrl?.image_intro }}"
-        categoryCard="{{ bigNews.editorias }}"
+        categoryCard="{{ bigNews.editorias | categoryName }}"
         titleCard="{{bigNews.titulo}}"
         dateCard="{{bigNews.data_publicacao}}"
     ></app-big-card>

@@ -12,8 +12,6 @@ export class ArticleComponent {
   getId:string | null = null;
   @Input()
   getArticle!: newsData;
-  @Input()
-  getArticleCategory:string = '';
 
   @Input()
   articleBreadcrumb: typeBreadcrumbs[] = [];
@@ -30,15 +28,14 @@ export class ArticleComponent {
     this.serviceApi.getData().subscribe((res) => {
       this.getArticle = res.filter((item) => item.id == Number(this.getId))[0];
       const category:string = this.getArticle.editorias;
-      this.getArticleCategory = this.serviceApi.getCategoryName(category);
       this.articleBreadcrumb = [
         {
           link: '/search/category/news',
-          name: 'notícias'
+          name: 'Notícias'
         },
         {
           link: `/search/category/${category}`,
-          name: this.getArticleCategory
+          name: category
         }
       ]
     });
