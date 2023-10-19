@@ -4,6 +4,7 @@ import { PageHome } from './pages/home/home.component';
 import { PostComponent } from './pages/post/post.component';
 import { SearchComponent } from './pages/search/search.component'
 import { CategoryComponent } from './pages/search/category/category.component'
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: 'search/category/:category',
     component: CategoryComponent
   },
+  {
+    path: 'contact',
+    component: ContactComponent
+  }
 ];
 
 @NgModule({

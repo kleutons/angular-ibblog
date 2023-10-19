@@ -7,6 +7,9 @@ section{
     flex-direction: column;
     gap: 10px;
 }
+section h1{
+    font-size: 1.7rem;
+}
 .search__header{
     display: flex;
     flex-direction: row;

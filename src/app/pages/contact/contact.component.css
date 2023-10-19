@@ -1,0 +1,49 @@
+section{
+    background: var(--bg-primary);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+section h1{
+    font-size: 1.7rem;
+}
+.inputs{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+input{
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+textarea{
+    padding: 8px 10px;
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:4px;
+    height: 34px;
+    background: var(--bg-button);
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    transition: all .4s;
+    font-size: 1.2rem;
+    margin-bottom: 80px;
+}

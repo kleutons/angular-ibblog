@@ -9,6 +9,7 @@ import { HomeModule } from './pages/home/home.module';
 import { PostModule } from './pages/post/post.module';
 import { SearchModule } from './pages/search/search.module'
 import { SharedModule } from './shared/shared.module';
+import { ContactModule } from './pages/contact/contact.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     PostModule,
     SearchModule,
     SharedModule,
+    ContactModule,
     HttpClientModule
   ],
   providers: [],

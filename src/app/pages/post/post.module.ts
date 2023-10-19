@@ -24,6 +24,9 @@ import { ArticleComponent } from './article/article.component';
     CommonModule,
     SharedModule,
     RouterModule
+  ],
+  exports: [
+    PostAuthorComponent
   ]
 })
 export class PostModule { }
